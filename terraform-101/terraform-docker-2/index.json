@@ -1,7 +1,7 @@
 {
   "title": "Terraform Tutorial - Part II",
   "description": "A Terraform tutorial using Docker - Part II",
-  "time": 5,
+  "time": "~15 minutes",
   "icon": "fa-terraform",
   "details": {
     "intro": {
