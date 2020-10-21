@@ -22,7 +22,7 @@
     "assets": {
       "host01": [
         {
-          "file": "main.tf",
+          "file": "*.tf",
           "target": "~/terraform-docker-demo"
         }
       ]
