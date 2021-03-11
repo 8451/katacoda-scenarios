@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-a123456
+  namespace: default
+  labels:
+    user: a123456
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      user: a123456
+  template:
+    metadata:
+      labels:
+        user: a123456
+    spec:
+      containers:
+      - name: tomcat
+        image: bitnami/tomcat
+        ports:
+        - containerPort: 8080
+        env:
+          - name: "TOMCAT_PASSWORD" # env variable for tomcat container
+            valueFrom:
+              secretKeyRef: # reference a secret
+                name: tomcat-pass-a123456 # name of the secret for the tomcat username we defined
+                key: "TOMCAT_PASSWORD" # value to extract from the secret
+          - name: "TOMCAT_USERNAME" # env variable for tomcat container
+            valueFrom:
+              secretKeyRef: # reference a secret
+                name: tomcat-user-a123456 # name of the secret for the tomcat password we defined
+                key: "TOMCAT_USERNAME" # value to extract from the secret#define a service for tomcat deployment
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: tomcat-service-a123456
+  namespace: default
+  labels:
+    user: a123456
+spec:
+  selector:
+    user: a123456
+  ports:
+    - name: http
+      port: 80 # port the service will open on
+      targetPort: 8080 # port the Pod is listening on (reference containerPort in the deployment)

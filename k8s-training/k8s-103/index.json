@@ -1,0 +1,55 @@
+{
+    "noindex": true,
+    "title": "Kubernetes 103",
+    "description": "Kubernetes: Services",
+    "time": "10-20 minutes",
+    "icon": "fa-kubernetes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1",
+                "text": "step1.md",
+                "code": "foreground.sh"
+            },
+            {
+                "title": "Step 2",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "step3.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "step4.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+                {"file": "*.yaml", "target": "/root", "chmod": "+r"}
+            ]
+        },
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [],
+    "environment": {
+        "hideintro": false,
+        "hidefinish": false,
+        "showvisualise": false,
+        "showdashboard": true,
+        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
+        "uilayout": "terminal-iframe"
+    },
+    "backend": {
+        "imageid": "ubuntu",
+        "port": "8080"
+    }
+}

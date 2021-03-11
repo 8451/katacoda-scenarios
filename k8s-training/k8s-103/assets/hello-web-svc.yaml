@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  hello-web-service-a123456
+  labels:
+    user: a123456
+spec:
+  selector:
+    user: a123456
+  ports:
+  - port:  80
+    protocol:  TCP

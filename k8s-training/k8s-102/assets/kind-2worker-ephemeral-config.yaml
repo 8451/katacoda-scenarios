@@ -1,0 +1,40 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+kubeadmConfigPatches:
+# enable EphemeralContainers feature gate
+- |
+  kind: ClusterConfiguration
+  metadata:
+    name: config
+  apiServer:
+    extraArgs:
+      "feature-gates": "EphemeralContainers=true"
+  scheduler:
+    extraArgs:
+      "feature-gates": "EphemeralContainers=true"
+  controllerManager:
+    extraArgs:
+      "feature-gates": "EphemeralContainers=true"
+- |
+  kind: InitConfiguration
+  metadata:
+    name: config
+  nodeRegistration:
+    kubeletExtraArgs:
+      "feature-gates": "EphemeralContainers=true"
+- |
+  kind: KubeletConfiguration
+  featureGates:
+    EphemeralContainers: true
+- |
+  kind: KubeProxyConfiguration
+  featureGates:
+    EphemeralContainers: true
+
+# 1 control plane node and workers
+nodes:
+# the control plane node config
+- role: control-plane
+# the workers
+- role: worker
+- role: worker

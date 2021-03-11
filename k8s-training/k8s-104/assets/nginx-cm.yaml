@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-index-a123456 # name of the ConfigMap, we will reference this in the deployment
+  namespace: default
+  labels:
+    user: a123456
+data:
+  index.html: <h1>Hello User!</h1> # the name of the file we want and its contents

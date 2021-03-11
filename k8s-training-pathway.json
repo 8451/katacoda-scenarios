@@ -1,0 +1,32 @@
+{
+    "title": "Kubernetes",
+    "description": "Kubernetes Introductory Training",
+    "icon": "fa-kubernetes",
+    "courses": [
+      {
+        "course_id": "k8s-101",
+        "title": "Kubernetes-101",
+        "description": "Kubernetes: CLI, Namespaces, Labels"
+      },
+      {
+        "course_id": "k8s-102",
+        "title": "Kubernetes 102",
+        "description": "Kubernetes: Deployments"
+      },
+      {
+        "course_id": "k8s-103",
+        "title": "Kubernetes 103",
+        "description": "Kubernetes: Services"
+      },
+      {
+        "course_id": "k8s-104",
+        "title": "Kubernetes-104",
+        "description": "Kubernetes: ConfigMaps"
+      },
+      {
+        "course_id": "k8s-105",
+        "title": "Kubernetes 105",
+        "description": "Kubernetes: Secrets"
+      }
+    ]
+  }

@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # would need to change according to what is current
+kind: Deployment # the kind of Kubernetes object we are creating
+metadata:
+  name: a123456-hello #name of the deployment
+  labels:
+    user: a123456
+spec:
+  replicas: 3 #number of pods for the application
+  selector:
+    matchLabels:
+      user: a123456
+  template:
+    metadata:
+      labels: # labeling the pod
+        user: a123456
+    spec:
+      containers:
+      - name: hello # assign a name to the container
+        image: busybox # the container image we're using
+        command: ['sh', '-c', 'echo Hello World! && sleep 3600'] # the command to run on the container
+
