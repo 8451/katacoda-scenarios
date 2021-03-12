@@ -5,7 +5,7 @@
     "courses": [
       {
         "course_id": "k8s-101",
-        "title": "Kubernetes-101",
+        "title": "Kubernetes 101",
         "description": "Kubernetes: CLI, Namespaces, Labels"
       },
       {
@@ -20,7 +20,7 @@
       },
       {
         "course_id": "k8s-104",
-        "title": "Kubernetes-104",
+        "title": "Kubernetes 104",
         "description": "Kubernetes: ConfigMaps"
       },
       {
