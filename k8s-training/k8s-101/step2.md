@@ -17,7 +17,7 @@ Let's check to make sure the kubectl cli is available and operational.
 `kubectl cluster-info`{{execute}}
 
 
-Also it is good proactice to make sure kubectl is pointing to the desired cluster / context before running commands.
+Also it is good practice to make sure kubectl is pointing to the desired cluster / context before running commands.
 
 `kubectl config view --minify`{{execute}}
 
